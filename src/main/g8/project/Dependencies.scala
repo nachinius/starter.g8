@@ -103,10 +103,10 @@ object Dependencies {
     val snapshots = Resolver.sonatypeRepo("snapshots")
     val release = Resolver.sonatypeRepo("release")
 
-    val mostResolvers = Seq(
-        "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
-        "Secured Central Repository" at "https://repo1.maven.org/maven2",
-        Resolver.sonatypeRepo("snapshots")
-    )
+    // val mostResolvers = Seq(
+    //     "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
+    //     "Secured Central Repository" at "https://repo1.maven.org/maven2",
+    //     Resolver.sonatypeRepo("snapshots")
+    // )
   }
 }

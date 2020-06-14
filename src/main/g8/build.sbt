@@ -1,7 +1,18 @@
 import Dependencies._
 import sbt._
 
+val otherCompile = taskKey[xsbti.compile.CompileAnalysis]("Another compile settings")
+otherCompile := (compile in Compile).value
 
+scalacOptions in otherCompile := (Compile / scalacOptions).value.diff(Seq(""))
+
+// aliases
+addCommandAlias("rtu", "; reload ; test:update")
+addCommandAlias("rtc", "; reload ; test:compile")
+addCommandAlias("ru", "; reload ; update")
+addCommandAlias("rc", "; reload ; compile")
+addCommandAlias("c", "; compile")
+addCommandAlias("oc", "; otherCompile")
 
 lazy val $name;format="camel"$ = (project in file("."))
   .settings(
@@ -41,11 +52,10 @@ lazy val $name;format="camel"$ = (project in file("."))
 /**
  * Ammonite
       sbt projectName/test:run
-      or if there are other main methods in the Test scope
-
       sbt projectName/test:run-main amm
-      To activate the Ammonite REPL
 **/
+addCommandAlias("amm", "test:run")
+
 libraryDependencies += {
   val version = scalaBinaryVersion.value match {
     case "2.10" => "1.0.3"
@@ -71,3 +81,4 @@ sourceGenerators in Test += Def.task {
     .flatMap(_.artifacts)
     .collect{case (a, f) if a.classifier == Some("sources") => f}
 }
+

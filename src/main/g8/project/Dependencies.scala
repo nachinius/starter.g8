@@ -10,7 +10,6 @@ object Dependencies {
     val catsRetry     = "1.1.0"
     val circe         = "0.13.0"
     val ciris         = "1.0.4"
-    val javaxCrypto   = "1.0.1"
     val fs2           = "2.3.0"
     val http4s        = "0.21.3"
     val http4sJwtAuth = "0.0.4"
@@ -21,6 +20,7 @@ object Dependencies {
     val skunk         = "0.0.8"
     val squants       = "1.6.0"
     val monocle       = "2.0.0"
+    val tapir         = "0.15.4"
 
     // compiler
     val betterMonadicFor = "0.3.1"
@@ -73,8 +73,6 @@ object Dependencies {
     val log4cats = "io.chrisdavenport" %% "log4cats-slf4j" % Versions.log4cats
     val newtype  = "io.estatico"       %% "newtype"        % Versions.newtype
 
-    val javaxCrypto = "javax.xml.crypto" % "jsr105-api" % Versions.javaxCrypto
-
     val redis4catsEffects  = "dev.profunktor" %% "redis4cats-effects"  % Versions.redis4cats
     val redis4catsLog4cats = "dev.profunktor" %% "redis4cats-log4cats" % Versions.redis4cats
 
@@ -83,6 +81,8 @@ object Dependencies {
 
     val monocleCore = "com.github.julien-truffaut" %% "monocle-core" % Versions.monocle
     val monocleMacro = "com.github.julien-truffaut" %% "monocle-macro" % Versions.monocle
+
+    val tapir = "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir
 
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor
@@ -103,10 +103,9 @@ object Dependencies {
     val snapshots = Resolver.sonatypeRepo("snapshots")
     val release = Resolver.sonatypeRepo("release")
 
-    // val mostResolvers = Seq(
-    //     "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
-    //     "Secured Central Repository" at "https://repo1.maven.org/maven2",
-    //     Resolver.sonatypeRepo("snapshots")
-    // )
+    val moreResolvers = Seq(
+        "Typesafe Snapshots" at "http://repo.typesafe.com/typesafe/snapshots/",
+        "Secured Central Repository" at "https://repo1.maven.org/maven2",
+    )
   }
 }

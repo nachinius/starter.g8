@@ -11,4 +11,8 @@ addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "1.5.1")
 // add ~reStart
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 
+// https://www.wartremover.org/
+//https://index.scala-lang.org/wartremover/wartremover/wartremover/2.4.9?target=_2.12
+addSbtPlugin("org.wartremover" % "sbt-wartremover" % "2.4.9")
+
 

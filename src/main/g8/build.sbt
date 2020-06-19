@@ -47,6 +47,7 @@ lazy val $name;format="camel"$ = (project in file("."))
       Libraries.refinedCats,
       Libraries.tapir
     ),
+    // wartremoverErrors ++= Warts.all
   )
 
 /**

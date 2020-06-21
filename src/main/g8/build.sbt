@@ -8,7 +8,7 @@ addCommandAlias("ru", "; reload ; update")
 addCommandAlias("rc", "; reload ; compile")
 addCommandAlias("c", "; compile")
 addCommandAlias("l","; lint:compile")
-addCommandAlias("s","; sculpit:compile")
+// addCommandAlias("s","; sculpit:compile")
 
 lazy val Lint: Configuration = config("lint") extend Compile
 lazy val Sculpit: Configuration = config("sculpit") extend Compile
@@ -60,11 +60,12 @@ lazy val $name;format="camel"$ = (project in file("."))
       ) }: _*).
   settings(
     scalacOptions in Compile := (scalacOptions in Compile).value filterNot { _ contains "wartremover" }
-  ).configs(Sculpit).settings(inConfig(Sculpit) {
-    Defaults.compileSettings ++
-      Seq(scalacOptions ++= Seq("-Xplugin:lib/scala-sculpt_2.12-0.1.4-SNAPSHOT.jar","-Xplugin-require:sculpt","-P:sculpt:out=target/sculpit.json")) ++
-      Seq(sources in Sculpit := { val old = (sources in Sculpit).value; old ++ (sources in Compile).value }
-      ) }: _*)
+  )
+// .configs(Sculpit).settings(inConfig(Sculpit) {
+    // Defaults.compileSettings ++
+    //   Seq(scalacOptions ++= Seq("-Xplugin:lib/scala-sculpt_2.12-0.1.4-SNAPSHOT.jar","-Xplugin-require:sculpt","-P:sculpt:out=target/sculpit.json")) ++
+    //   Seq(sources in Sculpit := { val old = (sources in Sculpit).value; old ++ (sources in Compile).value }
+    //   ) }: _*)
 
 /**
  * Ammonite

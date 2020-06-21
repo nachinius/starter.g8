@@ -4,4 +4,5 @@ boot/
 lib_managed/
 src_managed/
 project/plugins/project/
-.metals/
+/.vscode
+/.metals/

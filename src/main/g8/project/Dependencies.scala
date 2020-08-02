@@ -11,26 +11,37 @@ object Dependencies {
     val circe         = "0.13.0"
     val ciris         = "1.0.4"
     val fs2           = "2.3.0"
+
+    // http
     val http4s        = "0.21.3"
     val http4sJwtAuth = "0.0.4"
+
+
     val log4cats      = "1.0.1"
     val newtype       = "0.4.3"
     val refined       = "0.9.13"
     val redis4cats    = "0.9.6"
-    val skunk         = "0.0.8"
     val squants       = "1.6.0"
     val monocle       = "2.0.0"
     val tapir         = "0.15.4"
 
-    // compiler
+    // db
+    val skunk         = "0.0.8"
+    val quill         = "3.5.2"
+    val doobie        = "0.8.8"
+
+
+    // generic programming
+    val shapless      = "2.3.3"
+
+    // compiler plugins
     val betterMonadicFor = "0.3.1"
     val kindProjector    = "0.11.0"
     val logback          = "1.2.3"
     val macroParadise = "2.1.1"
 
     val scalaCheck    = "1.14.3"
-    val scalaTest     = "3.1.1"
-    val scalaTestPlus = "3.1.1.1"
+    val scalaTest     = "3.2.0"
   }
 
   object Libraries {
@@ -76,6 +87,16 @@ object Dependencies {
     val redis4catsEffects  = "dev.profunktor" %% "redis4cats-effects"  % Versions.redis4cats
     val redis4catsLog4cats = "dev.profunktor" %% "redis4cats-log4cats" % Versions.redis4cats
 
+    val doobie =   "org.tpolecat" %% "doobie-core" % Versions.doobie
+    val doobieH2 = "org.tpolecat" %% "doobie-h2"        % Versions.doobie          // H2 driver 1.4.200 + type mappings.
+    val doobieHikari = "org.tpolecat" %% "doobie-hikari"    % Versions.doobie          // HikariCP transactor.
+    val doobiePostgres = "org.tpolecat" %% "doobie-postgres"  % Versions.doobie          // Postgres driver 42.2.9 + type mappings.
+    val doobieQuill = "org.tpolecat" %% "doobie-quill"     % Versions.doobie          // Support for Quill 3.4.10
+    val doobieSpec2 = "org.tpolecat" %% "doobie-specs2"    % Versions.doobie % "test" // Specs2 support for typechecking statements.
+    val doobieScalaTest = "org.tpolecat" %% "doobie-scalatest" % Versions.doobie % "test" 
+
+    val quill = "io.getquill" %% "quill-core" % Versions.quill
+
     val skunkCore  = "org.tpolecat" %% "skunk-core"  % Versions.skunk
     val skunkCirce = "org.tpolecat" %% "skunk-circe" % Versions.skunk
 
@@ -83,6 +104,9 @@ object Dependencies {
     val monocleMacro = "com.github.julien-truffaut" %% "monocle-macro" % Versions.monocle
 
     val tapir = "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir
+
+    // shapeless
+    val shapeless = "com.chuusai" %% "shapeless" % Versions.shapless
 
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor
@@ -95,7 +119,6 @@ object Dependencies {
     // Test
     val scalaCheck    = "org.scalacheck"    %% "scalacheck"      % Versions.scalaCheck
     val scalaTest     = "org.scalatest"     %% "scalatest"       % Versions.scalaTest
-    val scalaTestPlus = "org.scalatestplus" %% "scalacheck-1-14" % Versions.scalaTestPlus
   }
 
   object Resolvers {

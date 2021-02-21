@@ -5,7 +5,9 @@ A [Giter8][g8] template for fp in scala 2.13.4
     sbt new nachinius/starter.g8
 
 
-### test locally
+### test locally the template itself
+#### By deploying to a subdir and running sbt compile; test
+
 1. clone nachinius/starter/g8
 2. point `LOC` where you put it
 3. create a test dir
@@ -16,6 +18,15 @@ A [Giter8][g8] template for fp in scala 2.13.4
             mkdir -p ~/dev/test-my-g8
             cd ~/dev/test-my-g8; g8 "file://$LOC" --name=g8test --force; cd g8test; sbt 
         }
+
+#### using makefile
+
+	make do
+	
+and clean up with
+	
+	make clean
+
 
 Template license
 ----------------

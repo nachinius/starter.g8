@@ -36,9 +36,8 @@ object Dependencies {
 
     // compiler plugins
     val betterMonadicFor = "0.3.1"
-    val kindProjector    = "0.11.0"
+    val kindProjector    = "0.11.3"
     val logback          = "1.2.3"
-    val macroParadise = "2.1.1"
 
     val scalaCheck    = "1.14.3"
     val scalaTest     = "3.2.0"
@@ -111,7 +110,6 @@ object Dependencies {
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor
     val kindProjector    = "org.typelevel" % "kind-projector"      % Versions.kindProjector
-    val macroParadise = "org.scalamacros" % "paradise" % Versions.macroParadise cross CrossVersion.full
 
     // Runtime
     val logback = "ch.qos.logback" % "logback-classic" % Versions.logback

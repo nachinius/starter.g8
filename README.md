@@ -1,11 +1,21 @@
 A [Giter8][g8] template for fp in scala 2.13.4
 
-### test 
-{
-    LOC="/Users/Ignacio/dev/23-g8-scala-fp-starter"
-    mkdir -p ~/dev/test-my-g8
-    cd ~/dev/test-my-g8; g8 "file://$LOC" --name=g8test --force; cd g8test; sbt 
-}
+### usage
+
+    sbt new nachinius/starter.g8
+
+
+### test locally
+1. clone nachinius/starter/g8
+2. point `LOC` where you put it
+3. create a test dir
+4. call `g8` locally
+     
+        {
+            LOC="/Users/Ignacio/dev/23-g8-scala-fp-starter"
+            mkdir -p ~/dev/test-my-g8
+            cd ~/dev/test-my-g8; g8 "file://$LOC" --name=g8test --force; cd g8test; sbt 
+        }
 
 Template license
 ----------------

@@ -41,6 +41,7 @@ object Dependencies {
 
     val scalaCheck    = "1.14.3"
     val scalaTest     = "3.2.0"
+    val munit         = "0.7.22"
   }
 
   object Libraries {
@@ -115,8 +116,8 @@ object Dependencies {
     val logback = "ch.qos.logback" % "logback-classic" % Versions.logback
 
     // Test
-    val scalaCheck    = "org.scalacheck"    %% "scalacheck"      % Versions.scalaCheck
-    val scalaTest     = "org.scalatest"     %% "scalatest"       % Versions.scalaTest
+    val munit         = "org.scalameta" %% "munit" % Versions.munit % Test
+
   }
 
   object Resolvers {

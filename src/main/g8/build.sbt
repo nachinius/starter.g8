@@ -39,7 +39,8 @@ lazy val $name;format="camel"$ = (project in file("."))
       Libraries.newtype,
       Libraries.refinedCore,
       Libraries.refinedCats,
-      Libraries.tapir
+      Libraries.tapir,
+      Libraries.munit
     )
   )
 

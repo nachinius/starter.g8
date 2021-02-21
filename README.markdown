@@ -1,4 +1,4 @@
-A [Giter8][g8] template for fp in scala 2.12.11
+A [Giter8][g8] template for fp in scala 2.13.4
 
 ### test 
 {

@@ -5,7 +5,7 @@ A [Giter8][g8] template for fp in scala 2.13.4
     sbt new nachinius/starter.g8
 
 
-### test locally the template itself
+### DEV this template: test the template locally
 #### By deploying to a subdir and running sbt compile; test
 
 1. clone nachinius/starter/g8

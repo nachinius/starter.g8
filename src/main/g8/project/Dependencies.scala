@@ -22,14 +22,14 @@ object Dependencies {
     val pureconfig    = "0.16.0"
 
     // logging
-    val log4cats      = "2.1.1"
+    val log4cats      = "1.1.1"
 
     // Mis
     val newtype       = "0.4.4"
     val refined       = "0.9.27"
     val redis4cats    = "0.11.0"
     val squants       = "1.8.3"
-    val monocle       = "3.0.0"
+    val monocle       = "2.1.0"
     val tapir         = "0.18.3"
 
     // db

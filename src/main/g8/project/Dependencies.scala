@@ -114,7 +114,7 @@ object Dependencies {
     val tapir = "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir
 
     // shapeless
-    val shapeless = "com.chuusai" %% "shapeless" % Versions.shapless
+    val shapeless = "com.chuusai" %% "shapeless" % Versions.shapeless
 
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor

@@ -6,3 +6,4 @@ src_managed/
 project/plugins/project/
 /.vscode
 /.metals/
+src/sbt-test/

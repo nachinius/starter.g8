@@ -1,0 +1,1 @@
+$ exec sbt compile test

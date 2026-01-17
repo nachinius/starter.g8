@@ -5,25 +5,31 @@ A [Giter8][g8] template for fp in scala 2.13.4
     sbt new nachinius/starter.g8
 
 
-### DEV this template: test the template locally
-#### By deploying to a subdir and running sbt compile; test
+### Testing the template
 
-1. clone nachinius/starter/g8
-2. point `LOC` where you put it
-3. create a test dir
-4. call `g8` locally
-     
-        {
-            LOC="/Users/Ignacio/dev/23-g8-scala-fp-starter"
-            mkdir -p ~/dev/test-my-g8
-            cd ~/dev/test-my-g8; g8 "file://$LOC" --name=g8test --force; cd g8test; sbt 
-        }
+This template includes automated validation to ensure it generates working projects.
 
-#### using makefile
+#### Quick validation
+
+Run the built-in tests:
+
+    sbt test
+
+This will generate a test project, compile it, and run its tests.
+
+#### Alternative testing methods
+
+See [TESTING.md](TESTING.md) for detailed documentation on all testing methods, including:
+- Using the scripted test framework
+- Manual validation with the Makefile
+- Standalone validation scripts
+- Integration with CI/CD
+
+#### Manual testing with Makefile
 
 	make do
 	
-and clean up with
+Clean up with:
 	
 	make clean
 

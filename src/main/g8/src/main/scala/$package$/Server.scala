@@ -1,4 +1,4 @@
-package com.nachinius.g8test
+package $package$
 
 import cats.effect._
 import cats.implicits._
